@@ -1,0 +1,10 @@
+.rainy{
+    background: rgba(51,54,112,1);
+    background: -moz-linear-gradient(top, rgba(51,54,112,1) 0%, rgba(201,201,201,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(51,54,112,1)), color-stop(100%, rgba(201,201,201,1)));
+    background: -webkit-linear-gradient(top, rgba(51,54,112,1) 0%, rgba(201,201,201,1) 100%);
+    background: -o-linear-gradient(top, rgba(51,54,112,1) 0%, rgba(201,201,201,1) 100%);
+    background: -ms-linear-gradient(top, rgba(51,54,112,1) 0%, rgba(201,201,201,1) 100%);
+    background: linear-gradient(to bottom, rgba(51,54,112,1) 0%, rgba(201,201,201,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333670', endColorstr='#c9c9c9', GradientType=0 );
+}
