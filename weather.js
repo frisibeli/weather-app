@@ -6,20 +6,26 @@ const APP_ID = 'f87a43d4ef836f82122aa25fa80507ca';
 function init(){
     let formElement = document.querySelector('#search-form');
     let textInputElement = document.querySelector('#search');
+    let resultElement = document.querySelector('#results')
 
     formElement.addEventListener('submit', function(e){
         e.preventDefault();
         let city = textInputElement.value;
         queryWeather(city)
-            .then(res => console.log(res));
+            .then(handleResult);
+
+        resultElement.style.display = "block"
     });
 
     textInputElement.addEventListener('keypress', e => {
-        if(e.keyCode == 13){
+        if(e.key == "Enter"){
             e.preventDefault();
             let city = textInputElement.value;
             queryWeather(city)
-                .then(res => console.log(res));
+                .then(handleResult);
+            
+            resultElement.style.display = "block"
+
         }
     })
 
@@ -35,5 +41,11 @@ function queryWeather(city, lat, lon) {
 }
 
 function handleResult(result){
+    let cityName = document.querySelector('#city-name')
+    let temperature = document.querySelector('#temperature')
+    let humidity = document.querySelector('#humidity')
+    let weatherIcon = document.querySelector('#weather-icon')
+    let description = document.querySelector('#description')
 
+    temperature.innerText = result.main.temp;
 }

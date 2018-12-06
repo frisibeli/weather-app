@@ -11,10 +11,23 @@
     <script src="weather.js"></script>
 </head>
 <body>
-    <h1>Weather info</h1>
     <form id="search-form">
         <input id="search" type="Text" placeholder="Enter city name" />
         <input type="submit" value="Go" />
     </form>
+
+    <section id="results">
+        <h1 id="city-name">Sofia</h1>
+        <figure>
+            <img id="weather-icon" src="http://openweathermap.org/img/w/10d.png" />
+            <figcaption id="description">clear sky</figcaption>
+        </figure>
+        <div>
+            <span id="temperature">4</span>°
+        </div>
+        <div id="humidity">
+            <span>43</span>%
+        </div>
+    </section>
 </body>
 </html>

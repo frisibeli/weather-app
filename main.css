@@ -4,6 +4,9 @@ body, html{
     box-sizing: border-box;
     overflow: hidden;
     font-family: 'Lato', sans-serif;
-    font-weight: lighter !important;
+    font-weight: light;
 }
 
+body > section{
+    display: none;
+}
