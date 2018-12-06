@@ -48,4 +48,8 @@ function handleResult(result){
     let description = document.querySelector('#description')
 
     temperature.innerText = result.main.temp;
+    cityName.innerText = result.name;
+    humidity.innerText = result.main.humidity;
+    description.innerText = result.weather[0].description;
+    weatherIcon.src = `http://openweathermap.org/img/w/${result.weather[0].icon}.png`
 }
